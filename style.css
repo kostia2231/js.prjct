@@ -3,12 +3,22 @@
   margin: 0;
   padding: 0;
   font-family: Roboto, sans-serif;
+  color: #212121;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header {
   padding: 15px 24px;
   display: flex;
   align-items: center;
+}
+h1 {
+  font-size: 42px;
 }
 
 .logo-wrapper {
@@ -95,6 +105,45 @@ header {
   font-size: 14px;
 }
 
+.join-button {
+  height: 40px;
+  width: 125px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00798a;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+}
+
 .language-element {
   font-size: 14px;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.main-txt {
+  width: 600px;
+  line-height: 52px;
+}
+.main-p {
+  width: 600px;
+  line-height: 24px;
+}
+
+.first-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.first-block-wrapper {
+  display: flex;
+  width: 1200px;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  gap: 45px;
 }
