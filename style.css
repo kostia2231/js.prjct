@@ -21,6 +21,10 @@ h1 {
   font-size: 42px;
 }
 
+h3 {
+  font-size: 20px;
+}
+
 .logo-wrapper {
   margin-right: 40px;
 }
@@ -142,8 +146,98 @@ h1 {
 
 .first-block-wrapper {
   display: flex;
-  width: 1200px;
+  max-width: 1200px;
   margin-top: 70px;
   margin-bottom: 100px;
   gap: 45px;
+}
+
+main {
+  width: 1200px;
+}
+
+.events-search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.events-button {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: rgba(151, 202, 209, 0.12);
+  padding: 0 10px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.events-txt {
+  color: #00798a;
+}
+
+.see-all-events-btn {
+  margin-left: auto;
+}
+
+.see-all-events-btn-txt {
+  color: #00798a;
+  font-weight: 500;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.card-bottom-o {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-date-time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card {
+  max-width: 272px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-topic-txt {
+  font-size: 14px;
+  font-weight: 500;
+  color: #707070;
+  padding: 5px 0;
+}
+
+.card-date-txt {
+  font-size: 14px;
+  letter-spacing: -0.35px;
+}
+
+.cards-wrapper {
+  max-width: 1200px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 90px 0;
+  margin-bottom: 100px;
 }
