@@ -6,10 +6,19 @@
   color: #212121;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+main {
+  width: 1200px;
 }
 
 header {
@@ -17,12 +26,63 @@ header {
   display: flex;
   align-items: center;
 }
+
+footer {
+  background-color: #212121;
+
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+
 h1 {
   font-size: 42px;
+  line-height: 52px;
+}
+
+h2 {
+  font-size: 28px;
 }
 
 h3 {
   font-size: 20px;
+  line-height: 24px;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+hr {
+  height: 2px;
+  background-color: #f6f7f8;
+  border: none;
+}
+
+.faded-p {
+  color: #707070;
+  max-width: 900px;
+}
+
+.smaller-p-footer {
+  font-size: 14px;
+  line-height: 20px;
+  color: #c5c4c4;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-wrapper {
@@ -152,14 +212,17 @@ h3 {
   gap: 45px;
 }
 
-main {
-  width: 1200px;
-}
-
 .events-search {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
+}
+
+.events-search-alt {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  gap: 15px;
 }
 
 .events-button {
@@ -240,4 +303,186 @@ main {
   justify-content: space-between;
   gap: 90px 0;
   margin-bottom: 100px;
+}
+
+.events-upcoming {
+  display: flex;
+  align-items: center;
+}
+
+.cards-wrapper-online {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.meetup-content-wrapper {
+  width: 1200px;
+  background-color: rgba(151, 202, 209, 0.08);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.join-meetup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  gap: 70px;
+}
+
+.meetup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sign-up-button {
+  height: 40px;
+  width: 190px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e32359;
+  color: #ffffff;
+  font-size: inherit;
+}
+
+.card-cat {
+  width: 135px;
+  background-color: rgba(151, 202, 209, 0.08);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  gap: 5px;
+}
+
+.categories-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.cities {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.cities-card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.how-works {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  border-radius: 8px;
+}
+
+.how-works-block {
+  width: 580px;
+  border-radius: 8px;
+  background-color: rgba(151, 202, 209, 0.08);
+  display: flex;
+  gap: 25px;
+  padding: 35px 25px;
+}
+
+.how-works-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.how-works-content {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.friendships-block-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.friendship-card {
+  max-width: 376px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-content-text {
+  color: #f6f7f8;
+}
+
+.footer-content {
+  width: 1120px;
+  padding: 20px 0;
+}
+
+.footer-content-top {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.get-started-button {
+  font-size: inherit;
+  background-color: #212121;
+  color: #f6f7f8;
+  border: 2px solid #f6f7f8;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.footer-content-main {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-content-main-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.socials-svg-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.marketplace {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-social-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.footer-content-bottom-wrapper {
+  display: flex;
+  gap: 30px;
 }
