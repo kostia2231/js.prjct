@@ -15,6 +15,10 @@
   --footer-width: 70rem;
 }
 
+.not-for-desktop {
+  display: none;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -23,12 +27,11 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-family: Roboto, sans-serif;
   color: var(--dark-bg-color);
 }
@@ -41,9 +44,9 @@ body {
 
 main {
   width: min(90%, (--main-width));
-  align-self: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 header-mobile {
@@ -540,9 +543,12 @@ hr {
   gap: 2rem;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1420px) {
   .categories-cards {
     width: 37.5rem;
+  }
+  .desktop-medium-block {
+    display: none;
   }
 }
 
@@ -557,14 +563,12 @@ hr {
     --h4-txt-size: 1rem;
   }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-
   .not-for-mobile {
     display: none;
+  }
+
+  .for-mobile {
+    display: block;
   }
 
   .smaller-svg {
@@ -658,6 +662,15 @@ hr {
     width: 70%;
   }
 
+  .meetup-art-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .meetup-art {
+    width: 80%;
+  }
+
   .events-search {
     width: 100%;
   }
@@ -684,11 +697,13 @@ hr {
     padding: 0;
     border-radius: 0;
     margin-bottom: 2rem;
+    align-self: center;
   }
 
   .join-meetup {
     flex-direction: column;
     gap: 1rem;
+    padding-inline: 1rem;
   }
 
   .sign-up-button {
