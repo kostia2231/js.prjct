@@ -422,6 +422,7 @@ hr {
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .how-works {
@@ -665,6 +666,18 @@ hr {
     width: 100%;
   }
 
+  .cards-wrapper {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .cards-wrapper-online {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
   .meetup-content-wrapper {
     flex-direction: column;
     width: 100vw;
@@ -700,12 +713,21 @@ hr {
     justify-content: center;
     width: 100%;
     margin-bottom: 2rem;
+    gap: 1.5rem;
   }
 
   .cities-png-mobile {
+    width: 90%;
   }
 
   .cities-card {
+    max-width: 150px;
+  }
+
+  .center-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .how-works-wrapper {
