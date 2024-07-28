@@ -64,6 +64,7 @@ header {
   align-items: center;
   justify-content: center;
   width: auto;
+  z-index: 2;
 }
 
 footer {
