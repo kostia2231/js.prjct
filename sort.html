@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style_2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,47 +14,48 @@
     />
   </head>
   <body>
-    <header>
-      <div class="logo-wrapper">
-        <object type="image/svg+xml" data="svg/logo.svg"></object>
-      </div>
-      <div class="serach-bar-wrapper">
-        <div class="search-wrapper">
-          <div class="search-bar">
-            <form>
-              <div class="search">
-                <object
-                  type="image/svg+xml"
-                  data="svg/search_icon.svg"
-                ></object>
-                <input
-                  class="search-input"
-                  type="text"
-                  name="query"
-                  placeholder="Search events"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="city-dropdown">
-            <p>Mountain View, CA</p>
-          </div>
+    <div class="dropdowns-wrapper">
+      <div class="dropdown" id="distanceDropdown">
+        <div class="select">
+          <span class="selected">Distance</span>
+          <div class="caret"></div>
         </div>
-        <div class="search-button">
-          <object
-            type="image/svg+xml"
-            data="svg/search_icon_button.svg"
-          ></object>
-        </div>
+        <ul class="menu">
+          <li data-value="50">< 50 km</li>
+          <li data-value="100">< 100 km</li>
+          <li data-value="200">< 200 km</li>
+          <li class="activ" data-value="">Any distance</li>
+        </ul>
       </div>
-      <div class="right-side-header">
-        <div class="langauge-change">
-          <object type="image/svg+xml" data="svg/language_icon.svg"></object>
-          <p class="language-element">English</p>
+      <div class="dropdown" id="typeDropdown">
+        <div class="select">
+          <span class="selected">Type</span>
+          <div class="caret"></div>
         </div>
-        <button class="log-in-button">Log in</button>
-        <button class="sign-in-button">Sign up</button>
+        <ul class="menu">
+          <li data-value="1">aaaaa</li>
+          <li data-value="2">bbbbb</li>
+          <li data-value="3">ccccc</li>
+          <li class="activ" data-value="">Any Type</li>
+        </ul>
       </div>
-    </header>
+      <div class="dropdown" id="categoryDropdown">
+        <div class="select">
+          <span class="selected">Category</span>
+          <div class="caret"></div>
+        </div>
+        <ul class="menu">
+          <li data-value="Hobbies and Passions">Hobbies and Passions</li>
+          <li data-value="Technology">Technology</li>
+          <li data-value="Social Activities">Social Activities</li>
+          <li data-value="Business">Business</li>
+          <li data-value="Health and Wellbeing">Health and Wellbeing</li>
+          <li class="activ" data-value="">Any Category</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="script/script.js"></script>
+    <script src="script/script_2.js"></script>
   </body>
 </html>
