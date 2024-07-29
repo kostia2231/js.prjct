@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="style/style_2.css" />
+    <link rel="stylesheet" href="style/style-sort.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -58,27 +58,31 @@
     </header>
     <div class="top-wrapper">
       <div class="top">
-        <h2>Events near New York, NY</h2>
-        <p class="see-all-events-btn-txt">Events</p>
+        <div>
+          <h2>Events near New York, NY</h2>
+        </div>
+        <div><p class="see-all-events-btn-txt">Events</p></div>
       </div>
     </div>
     <div class="dropdowns-wrapper">
       <div class="dropdown" id="distanceDropdown">
         <div class="select">
-          <span class="selected"
-            >Distance<div class="caret"></div></span>
+          <span class="selected">Any distance</span>
+          <div class="caret"></div>
         </div>
         <ul class="menu">
           <li class="active" data-value="">Any distance</li>
-          <li data-value="5">< 5 km</li>
-          <li data-value="10">< 10 km</li>
-          <li data-value="25">< 25 km</li>
+          <li data-value="0">0 km</li>
+          <li data-value="5">5 km</li>
+          <li data-value="10">10 km</li>
+          <li data-value="25">25 km</li>
+          <li data-value="50">50 km</li>
         </ul>
       </div>
       <div class="dropdown" id="typeDropdown">
         <div class="select">
-          <span class="selected">Type<div class="caret"></div></span>
-
+          <span class="selected">Any type</span>
+          <div class="caret"></div>
         </div>
         <ul class="menu">
           <li class="active" data-value="">Any Type</li>
@@ -88,8 +92,8 @@
       </div>
       <div class="dropdown" id="categoryDropdown">
         <div class="select">
-          <span class="selected">Category<div class="caret"></div></span>
-
+          <span class="selected">Any category</span>
+          <div class="caret"></div>
         </div>
         <ul class="menu">
           <li class="active" data-value="">Any Category</li>
@@ -101,7 +105,123 @@
         </ul>
       </div>
     </div>
-    <div id="cardContainer" class="cards-wrapper not-for-mobile"></div>
+    <div id="cardContainerSort" class="cards-wrapper-sort not-for-mobile"></div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-content-top">
+          <p class="footer-content-text">Create your own Meetup group.</p>
+          <div>
+            <button class="get-started-button">Get started</button>
+          </div>
+        </div>
+        <hr />
+        <div class="footer-content-main">
+          <div class="footer-content-main-block">
+            <p class="footer-content-text">Your Account</p>
+            <p class="smaller-p-footer" class="footer-content-text">Sign up</p>
+            <p class="smaller-p-footer" class="footer-content-text">Log in</p>
+            <p class="smaller-p-footer" class="footer-content-text">Help</p>
+            <p class="smaller-p-footer" class="footer-content-text">
+              Become an Affiliate
+            </p>
+          </div>
+          <div class="footer-content-main-block">
+            <p class="footer-content-text">Discover</p>
+            <p class="smaller-p-footer" class="footer-content-text">Groups</p>
+            <p class="smaller-p-footer" class="footer-content-text">Calendar</p>
+            <p class="smaller-p-footer" class="footer-content-text">Topics</p>
+            <p class="smaller-p-footer" class="footer-content-text">Cities</p>
+            <p class="smaller-p-footer" class="footer-content-text">
+              Online Events
+            </p>
+            <p class="smaller-p-footer" class="footer-content-text">
+              Local Guides
+            </p>
+            <p class="smaller-p-footer" class="footer-content-text">
+              Make Friends
+            </p>
+          </div>
+          <div class="footer-content-main-block">
+            <p class="footer-content-text">Meetup</p>
+            <p class="smaller-p-footer" class="footer-content-text">About</p>
+            <p class="smaller-p-footer" class="footer-content-text">Blog</p>
+            <p class="smaller-p-footer" class="footer-content-text">
+              Meetup Pro
+            </p>
+            <p class="smaller-p-footer" class="footer-content-text">Careers</p>
+            <p class="smaller-p-footer" class="footer-content-text">Apps</p>
+            <p class="smaller-p-footer" class="footer-content-text">Podcast</p>
+          </div>
+        </div>
+        <div class="footer-social-wrapper">
+          <div class="footer-socials">
+            <p class="footer-content-text">Follow us :</p>
+            <div class="socials-svg-wrapper">
+              <div class="socials-svg">
+                <object
+                  type="image/svg+xml"
+                  data="svg/socials-svg/Link - Meetup on Facebook → SVG.svg"
+                ></object>
+              </div>
+              <div class="socials-svg">
+                <object
+                  type="image/svg+xml"
+                  data="svg/socials-svg/Link - Meetup on Twitter → SVG.svg"
+                ></object>
+              </div>
+              <div class="socials-svg">
+                <object
+                  type="image/svg+xml"
+                  data="svg/socials-svg/Link - Meetup on YouTube → SVG.svg"
+                ></object>
+              </div>
+              <div class="socials-svg">
+                <object
+                  type="image/svg+xml"
+                  data="svg/socials-svg/Link - Instagram → SVG.svg"
+                ></object>
+              </div>
+              <div class="socials-svg">
+                <object
+                  type="image/svg+xml"
+                  data="svg/socials-svg/Link - TikTok → SVG.svg"
+                ></object>
+              </div>
+            </div>
+          </div>
+          <div class="not-for-mobile marketplace">
+            <div>
+              <img src="/png/downloads/download_en-US.svg fill.png" alt="" />
+            </div>
+            <div>
+              <img src="/png/downloads/download_en-US.svg fill-1.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-content-bottom-wrapper">
+          <div class="footer-content-bottom">
+            <p class="smaller-p-footer footer-content-text">© 2024 Meetup</p>
+          </div>
+          <div class="not-for-mobile footer-content-bottom">
+            <p class="smaller-p-footer footer-content-text">Terms of Service</p>
+          </div>
+          <div class="not-for-mobile footer-content-bottom">
+            <p class="smaller-p-footer footer-content-text">Privacy Policy</p>
+          </div>
+          <div class="not-for-mobile footer-content-bottom">
+            <p class="smaller-p-footer footer-content-text">
+              Do Not Sell or Share My Personal Data
+            </p>
+          </div>
+          <div class="not-for-mobile footer-content-bottom">
+            <p class="smaller-p-footer footer-content-text">Cookie Policy</p>
+          </div>
+          <div class="not-for-mobile footer-content-bottom">
+            <p class="smaller-p-footer footer-content-text">Help</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="script/script.js"></script>
   </body>
 </html>

@@ -8,6 +8,14 @@
 }
 
 .selected {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.select {
+  display: flex;
+  align-items: center;
   height: 2.5rem;
   background: #f6f7f8;
   color: black;
@@ -21,11 +29,7 @@
   padding: 0 1rem;
   cursor: pointer;
   transition: background 0.3s;
-  width: 150px;
-}
-.select {
-  display: flex;
-  align-items: center;
+  width: 100%;
 }
 
 .caret {
@@ -34,7 +38,7 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 6px solid black;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .caret-rotate {
@@ -46,7 +50,7 @@
   box-shadow: 0 0 0.8rem black;
 }
 
-.selected:hover {
+.select:hover {
   background: #d1d1d1;
 }
 
@@ -95,17 +99,76 @@
   align-items: start;
   gap: 1rem;
   width: 90%;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 3rem;
 }
 
 .top {
   align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.top p {
+  font-size: 20px;
+  text-decoration: 3px underline;
 }
 
 .top-wrapper {
   margin-top: 8.75rem;
   display: flex;
-  align-items: start;
   width: 90%;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.cards-wrapper-sort {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 90%;
+  gap: 1rem;
+  margin-bottom: 8.75rem;
+}
+
+.card-sort {
+  max-width: 60%;
+  display: flex;
+  gap: 1rem;
+}
+
+.card-img-sort {
+  max-width: 160px;
+}
+
+.card-date-txt-sort {
+  font-size: 14px;
+  color: #7c6f50;
+}
+
+.card-heading-txt-sort {
+  font-size: 1rem;
+}
+
+.card-topic-txt-sort {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #707070;
+}
+
+.hr-and-card-wrapper-sort {
+  width: 100%;
+}
+
+.hr-sort {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 1px #d9d9d9 solid;
+}
+
+.all-card-sort {
+  display: flex;
+  gap: 1rem;
 }

@@ -95,44 +95,48 @@ const cards = [
     date: "Thu, Mar 14 · 5:00 PM PDT",
   },
 ];
-
+// отправляем массив в LocalStorage
 localStorage.setItem("cards", JSON.stringify(cards));
 
 // DISPLAY CARDS ON SCREEN FUNC /////////////////////////////////////////////////////////////////
 // INSERTING HTML_CARD_BLUEPRINT /////////////////////////////////////////////////////////////////
 
 function displayCards(cards) {
-  const cardContainer = document.getElementById("cardContainer");
+  const cardContainer = document.getElementById("cardContainerSort");
   cardContainer.innerHTML = "";
 
   if (cards.length === 0) {
-    cardContainer.innerHTML = "<p>No cards match your criteria. :(</p>";
+    cardContainer.innerHTML = "<p>): No cards match your criteria. :(</p>";
   } else {
     cards.forEach((el) => {
       const userCard = document.createElement("div");
-      userCard.className = "card";
+      userCard.className = "card-sort";
       userCard.innerHTML = `
-      <div>
-        <img src="${el.image}" alt="" class="card_img" />
+<div class="hr-and-card-wrapper-sort">
+  <div class="hr-sort"></div>
+  <div class="all-card-sort">
+    <div>
+      <img src="${el.image}" alt="" class="card-img-sort" />
+    </div>
+    <div class="card-content-sort">
+      <div class="card-date-time-sort">
+        <p class="card-date-txt-sort">${el.date}</p>
       </div>
-      <div class="card-content">
-        <h3 class="card-heading-txt">${el.title}</h3>
-        <p class="card-topic-txt">${el.categoryName} (${el.distance} km)</p>
-        <div class="card-date-time">
-          <object type="image/svg+xml" data="svg/date.svg"></object>
-          <p class="card-date-txt">${el.date}</p>
-        </div>
-        <div class="card-bottom">
-          <div class="card-bottom-o">
-            <object type="image/svg+xml" data="svg/check-going.svg"></object>
-            <p>${el.participants} going</p>
-          </div>
-          <div class="card-bottom-o">
-            <object type="image/svg+xml" data="svg/ticket.svg"></object>
-            <p>${el.price}</p>
+      <div class="card-content-sort">
+        <h3 class="card-heading-txt-sort">${el.title}</h3>
+        <p class="card-topic-txt">
+          ${el.categoryName} (${el.distance} km)
+        </p>
+        <div class="card-bottom-sort">
+          <div class="card-bottom-sort">
+            <p class="card-topic-txt-sort">${el.participants} going</p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
       `;
       cardContainer.appendChild(userCard);
     });
@@ -227,14 +231,14 @@ function filterCards() {
     try {
       const storedCards = JSON.parse(storedCardsJSON);
       const filteredCards = storedCards.filter((card) => {
-        const lessThenDistance = distance
-          ? card.distance <= parseInt(distance)
+        const sameDistance = distance
+          ? card.distance === parseInt(distance)
           : true;
-        const matchesType = type ? card.type === parseInt(type) : true;
-        const matchesCategory = category
+        const sameType = type ? card.type === parseInt(type) : true;
+        const sameCategory = category
           ? card.category === parseInt(category)
           : true;
-        return lessThenDistance && matchesType && matchesCategory;
+        return sameDistance && sameType && sameCategory;
       });
 
       displayCards(filteredCards);
