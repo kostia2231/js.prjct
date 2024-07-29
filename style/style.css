@@ -44,7 +44,7 @@ body {
 }
 
 main {
-  width: max(90%, var(--main-width));
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -309,7 +309,7 @@ hr {
 }
 
 .card {
-  max-width: 272px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -334,9 +334,8 @@ hr {
 
 .cards-wrapper {
   margin-bottom: 6.25rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 5.5rem 1rem;
   width: min(90%, var(--main-width));
   align-self: center;
@@ -354,10 +353,9 @@ hr {
 .cards-wrapper-online {
   width: min(90%, var(--main-width));
   align-self: center;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 5.5rem 1rem;
-  justify-content: space-between;
   margin-bottom: 6.25rem;
 }
 
@@ -397,8 +395,8 @@ hr {
 }
 
 .card-cat {
-  height: 8rem;
-  width: 8.5rem;
+  min-height: 8rem;
+  width: 100%;
   background-color: var(--ligt-blue-bg-color);
   border-radius: var(--radius);
   display: flex;
@@ -411,9 +409,8 @@ hr {
 .categories-cards {
   width: min(90%, var(--main-width));
   align-self: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
   margin-bottom: 6.25rem;
   gap: 1.5rem 0.5rem;
 }
@@ -733,8 +730,8 @@ hr {
   }
 
   .categories-cards {
-    flex-wrap: wrap;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
     gap: 1.5rem 1.5rem;
     justify-content: center;
     margin-bottom: 2rem;

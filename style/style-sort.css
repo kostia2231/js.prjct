@@ -116,7 +116,6 @@
 }
 
 .top-wrapper {
-  margin-top: 8.75rem;
   display: flex;
   width: 90%;
   gap: 1rem;
@@ -126,13 +125,13 @@
 .cards-wrapper-sort {
   display: grid;
   grid-template-columns: 1fr;
-  width: 90%;
+  width: 100%;
   gap: 1rem;
   margin-bottom: 8.75rem;
 }
 
 .card-sort {
-  max-width: 60%;
+  max-width: 100%;
   display: flex;
   gap: 1rem;
 }
@@ -171,4 +170,21 @@
 .all-card-sort {
   display: flex;
   gap: 1rem;
+}
+
+.both-sides-wrapper {
+  width: min(90%, var(--main-width));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 8.75rem;
+}
+
+.right-side {
+  margin-left: auto;
+  text-align: end;
+}
+
+.right-side p {
+  font-size: 12px;
+  font-weight: 600;
 }

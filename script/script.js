@@ -94,6 +94,54 @@ const cards = [
     type: 2,
     date: "Thu, Mar 14 · 5:00 PM PDT",
   },
+  {
+    title: "Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers",
+    image:
+      "https://lh3.googleusercontent.com/d/1HXggN9iNNLe82icbIyTdeV11Z1oVO8qO",
+    categoryName: "Business",
+    category: 1,
+    participants: 3,
+    price: "Free",
+    distance: 25,
+    type: 1,
+    date: "Thu, Mar 14 · 6:00 PM PDT",
+  },
+  {
+    title: "Vision Pro Developers Online Meetup",
+    image:
+      "https://lh3.googleusercontent.com/d/1lXZHC5QqaOX7Ym5iaubKL4DfR-xqgtp7",
+    categoryName: "Technology",
+    category: 2,
+    participants: 51,
+    price: 0,
+    distance: 0,
+    type: 1,
+    date: "Wed, Mar 13 · 7:00 PM PDT",
+  },
+  {
+    title: "Significant Musical Moments",
+    image:
+      "https://lh3.googleusercontent.com/d/1L_EtYKWs_8Dm_0CfDI1hQ1KwN81PdbkO",
+    categoryName: "Hobbies and Passions",
+    category: 5,
+    participants: 16,
+    price: 0,
+    distance: 10,
+    type: 1,
+    date: "Wed, Mar 13 · 6:00 PM PDT",
+  },
+  {
+    title: "FREE Webinar: Introduction to Power BI",
+    image:
+      "https://lh3.googleusercontent.com/d/1CGz7GOJeESth-focyP8p_MnlRok8serg",
+    categoryName: "Technology",
+    category: 2,
+    participants: 33,
+    price: 0,
+    distance: 0,
+    type: 1,
+    date: "Thu, Mar 14 · 5:30 PM PDT",
+  },
 ];
 // отправляем массив в LocalStorage
 localStorage.setItem("cards", JSON.stringify(cards));
@@ -136,7 +184,6 @@ function displayCards(cards) {
     </div>
   </div>
 </div>
-
       `;
       cardContainer.appendChild(userCard);
     });

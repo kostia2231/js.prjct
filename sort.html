@@ -56,56 +56,67 @@
         <button class="sign-in-button">Sign up</button>
       </div>
     </header>
-    <div class="top-wrapper">
-      <div class="top">
-        <div>
-          <h2>Events near New York, NY</h2>
+    <div class="both-sides-wrapper">
+      <div class="left-side">
+        <div class="top-wrapper">
+          <div class="top">
+            <div>
+              <h2>Events near New York, NY</h2>
+            </div>
+            <div><p class="see-all-events-btn-txt">Events</p></div>
+          </div>
         </div>
-        <div><p class="see-all-events-btn-txt">Events</p></div>
+        <div class="dropdowns-wrapper">
+          <div class="dropdown" id="distanceDropdown">
+            <div class="select">
+              <span class="selected">Any distance</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active" data-value="">Any distance</li>
+              <li data-value="0">0 km</li>
+              <li data-value="5">5 km</li>
+              <li data-value="10">10 km</li>
+              <li data-value="25">25 km</li>
+              <li data-value="50">50 km</li>
+            </ul>
+          </div>
+          <div class="dropdown" id="typeDropdown">
+            <div class="select">
+              <span class="selected">Any type</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active" data-value="">Any Type</li>
+              <li data-value="1">Online</li>
+              <li data-value="2">Offline</li>
+            </ul>
+          </div>
+          <div class="dropdown" id="categoryDropdown">
+            <div class="select">
+              <span class="selected">Any category</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active" data-value="">Any Category</li>
+              <li data-value="1">Business</li>
+              <li data-value="2">Technology</li>
+              <li data-value="3">Social Activities</li>
+              <li data-value="4">Health and Wellbeing</li>
+              <li data-value="5">Hobbies and Passions</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          id="cardContainerSort"
+          class="cards-wrapper-sort not-for-mobile"
+        ></div>
+      </div>
+      <div class="right-side">
+        <p>Find events near</p>
+        <h3>New York, NY</h3>
       </div>
     </div>
-    <div class="dropdowns-wrapper">
-      <div class="dropdown" id="distanceDropdown">
-        <div class="select">
-          <span class="selected">Any distance</span>
-          <div class="caret"></div>
-        </div>
-        <ul class="menu">
-          <li class="active" data-value="">Any distance</li>
-          <li data-value="0">0 km</li>
-          <li data-value="5">5 km</li>
-          <li data-value="10">10 km</li>
-          <li data-value="25">25 km</li>
-          <li data-value="50">50 km</li>
-        </ul>
-      </div>
-      <div class="dropdown" id="typeDropdown">
-        <div class="select">
-          <span class="selected">Any type</span>
-          <div class="caret"></div>
-        </div>
-        <ul class="menu">
-          <li class="active" data-value="">Any Type</li>
-          <li data-value="1">Online</li>
-          <li data-value="2">Offline</li>
-        </ul>
-      </div>
-      <div class="dropdown" id="categoryDropdown">
-        <div class="select">
-          <span class="selected">Any category</span>
-          <div class="caret"></div>
-        </div>
-        <ul class="menu">
-          <li class="active" data-value="">Any Category</li>
-          <li data-value="1">Business</li>
-          <li data-value="2">Technology</li>
-          <li data-value="3">Social Activities</li>
-          <li data-value="4">Health and Wellbeing</li>
-          <li data-value="5">Hobbies and Passions</li>
-        </ul>
-      </div>
-    </div>
-    <div id="cardContainerSort" class="cards-wrapper-sort not-for-mobile"></div>
     <footer>
       <div class="footer-content">
         <div class="footer-content-top">
@@ -222,6 +233,7 @@
         </div>
       </div>
     </footer>
+
     <script src="script/script.js"></script>
   </body>
 </html>
