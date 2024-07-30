@@ -1,4 +1,4 @@
-const cards = [
+const cardsM = [
   {
     title: "Day Trading Idea and Strategy",
     image:
@@ -144,5 +144,114 @@ const cardsOnline = [
     date: "Thu, Mar 14 · 5:30 PM PDT",
   },
 ];
-localStorage.setItem("cards", JSON.stringify(cards));
+
+localStorage.setItem("cardsM", JSON.stringify(cardsM));
 localStorage.setItem("cardsOnline", JSON.stringify(cardsOnline));
+
+function displayCardsM(cardsM) {
+  const cardContainerM = document.getElementById("cardContainerM");
+  cardContainerM.innerHTML = "";
+
+  if (cardsM.length === 0) {
+    cardContainerM.innerHTML = "<p>): No cards have been found :(</p>";
+  } else {
+    cardsM.forEach((el) => {
+      const userCardM = document.createElement("div");
+      userCardM.className = "card-m";
+      userCardM.innerHTML = `
+      <div class="card-m">
+  <div class="hr-and-card-wrapper-m">
+    <div class="hr-m"></div>
+    <div class="all-card-m">
+      <div>
+        <img src="${el.image}" alt="" class="card-img-m" />
+      </div>
+      <div class="card-content-m">
+        <div class="card-date-time-m">
+          <p class="card-date-txt-m">${el.date}</p>
+        </div>
+        <div class="card-content-m">
+          <h3 class="card-heading-txt-m">${el.title}</h3>
+          <p class="card-topic-txt">${el.categoryName} (${el.distance} km)</p>
+          <div class="card-bottom-m">
+            <div class="card-bottom-m">
+              <p class="card-topic-txt-m">${el.participants} going</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      `;
+      cardContainerM.appendChild(userCardM);
+    });
+  }
+}
+window.addEventListener("load", () => {
+  const storedCardsJSON = localStorage.getItem("cardsM");
+  if (storedCardsJSON) {
+    try {
+      const storedCards = JSON.parse(storedCardsJSON);
+      displayCardsM(storedCards);
+    } catch (error) {
+      console.error("Error parsing JSON from local storage: ", error);
+    }
+  } else {
+    console.log("No cards found in local storage.");
+  }
+});
+
+function displayCardsOnline(cardsOnline) {
+  const cardContainerOnline = document.getElementById("cardContainerOnline");
+  cardContainerOnline.innerHTML = "";
+
+  if (cardsOnline.length === 0) {
+    cardContainerOnline.innerHTML = "<p>): No cards have been found :(</p>";
+  } else {
+    cardsOnline.forEach((el) => {
+      const userCardOnline = document.createElement("div");
+      userCardOnline.className = "card-m";
+      userCardOnline.innerHTML = `
+      <div class="card-m">
+  <div class="hr-and-card-wrapper-m">
+    <div class="hr-m"></div>
+    <div class="all-card-m">
+      <div>
+        <img src="${el.image}" alt="" class="card-img-m" />
+      </div>
+      <div class="card-content-m">
+        <div class="card-date-time-m">
+          <p class="card-date-txt-m">${el.date}</p>
+        </div>
+        <div class="card-content-m">
+          <h3 class="card-heading-txt-m">${el.title}</h3>
+          <p class="card-topic-txt">${el.categoryName} (${el.distance} km)</p>
+          <div class="card-bottom-m">
+            <div class="card-bottom-m">
+              <p class="card-topic-txt-m">${el.participants} going</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      `;
+      cardContainerOnline.appendChild(userCardOnline);
+    });
+  }
+}
+window.addEventListener("load", () => {
+  const storedCardsOnlineJSON = localStorage.getItem("cardsOnline");
+  if (storedCardsOnlineJSON) {
+    try {
+      const storedCardsOnline = JSON.parse(storedCardsOnlineJSON);
+      displayCardsOnline(storedCardsOnline);
+    } catch (error) {
+      console.error("Error parsing JSON from local storage: ", error);
+    }
+  } else {
+    console.log("No cards found in local storage.");
+  }
+});

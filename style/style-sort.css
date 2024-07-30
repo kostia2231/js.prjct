@@ -98,7 +98,7 @@
   display: flex;
   align-items: start;
   gap: 1rem;
-  width: 90%;
+  width: 100%;
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
@@ -143,6 +143,7 @@
 .card-date-txt-sort {
   font-size: 14px;
   color: #7c6f50;
+  text-transform: uppercase;
 }
 
 .card-heading-txt-sort {
@@ -187,4 +188,37 @@
 .right-side p {
   font-size: 12px;
   font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .both-sides-wrapper {
+    grid-template-columns: 1fr;
+    margin-top: auto;
+  }
+  .top {
+    gap: 2rem;
+  }
+  .selected {
+    font-size: 14px;
+  }
+  .menu {
+    font-size: 14px;
+  }
+  .cards-wrapper-sort {
+    margin-bottom: 5rem;
+  }
+  .dropdowns-wrapper {
+    width: 100%;
+  }
+  .card-date-txt-sort {
+    font-size: 9px;
+  }
+  .card-topic-txt-sort {
+    font-size: 9px;
+    margin-top: 1rem;
+  }
+  .card-heading-txt-sort {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }

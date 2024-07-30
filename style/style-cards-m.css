@@ -1,0 +1,56 @@
+
+
+
+@media (max-width: 480px) {
+  .cards-wrapper-m {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .card-m {
+    max-width: 100%;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .card-img-m {
+    max-width: 160px;
+  }
+
+  .card-date-txt-m {
+    font-size: 9px;
+    color: #7c6f50;
+    text-transform: uppercase;
+  }
+
+  .card-heading-txt-m {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card-topic-txt-m {
+    font-size: 9px;
+    margin-top: 1rem;
+    color: #707070;
+  }
+
+  .hr-and-card-wrapper-m {
+    width: 100%;
+  }
+
+  .hr-m {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 1px #d9d9d9 solid;
+  }
+
+  .all-card-m {
+    display: flex;
+    gap: 1rem;
+  }
+}

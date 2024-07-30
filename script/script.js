@@ -143,10 +143,9 @@ const cards = [
     date: "Thu, Mar 14 · 5:30 PM PDT",
   },
 ];
-// отправляем массив в LocalStorage
 localStorage.setItem("cards", JSON.stringify(cards));
 
-// DISPLAY CARDS ON SCREEN FUNC /////////////////////////////////////////////////////////////////
+// DISPLAY CARDS ON SCREEN FOO /////////////////////////////////////////////////////////////////
 // INSERTING HTML_CARD_BLUEPRINT /////////////////////////////////////////////////////////////////
 
 function displayCards(cards) {
@@ -191,7 +190,6 @@ function displayCards(cards) {
 }
 
 // GETTING CARDS WITH A SITE LOADING ////////////////////////////////////////////////////////////
-
 window.addEventListener("load", () => {
   const storedCardsJSON = localStorage.getItem("cards");
   if (storedCardsJSON) {
@@ -207,7 +205,6 @@ window.addEventListener("load", () => {
 });
 
 // DROPDOWN ////////////////////////////////////////////////////////////////////////////////////
-
 const dropdowns = document.querySelectorAll(".dropdown");
 
 dropdowns.forEach((dropdown) => {
@@ -242,7 +239,6 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
-// Обработчик клика на документе для закрытия меню при клике вне его
 document.addEventListener("click", (event) => {
   dropdowns.forEach((dropdown) => {
     const select = dropdown.querySelector(".select");
@@ -261,8 +257,7 @@ document.addEventListener("click", (event) => {
   });
 });
 
-// FILTER FUNC /////////////////////////////////////////////////////////////////////////////////
-
+// FILTER FOO /////////////////////////////////////////////////////////////////////////////////
 function filterCards() {
   const distance =
     document.querySelector("#distanceDropdown .menu .active")?.dataset.value ||

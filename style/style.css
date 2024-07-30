@@ -335,7 +335,7 @@ hr {
 .cards-wrapper {
   margin-bottom: 6.25rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 5.5rem 1rem;
   width: min(90%, var(--main-width));
   align-self: center;
@@ -354,7 +354,7 @@ hr {
   width: min(90%, var(--main-width));
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 5.5rem 1rem;
   margin-bottom: 6.25rem;
 }
@@ -616,6 +616,10 @@ hr {
     padding-inline: 1rem;
   }
 
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+
   .header-top {
     display: flex;
   }
@@ -731,7 +735,7 @@ hr {
 
   .categories-cards {
     grid-template-columns: repeat(2, 1fr);
-    width: 90%;
+    width: 85%;
     gap: 1.5rem 1.5rem;
     justify-content: center;
     margin-bottom: 2rem;
