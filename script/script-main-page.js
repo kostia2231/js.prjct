@@ -65,7 +65,7 @@ const cardsM = [
     categoryName: "Social Activities",
     category: 3,
     participants: 51,
-    price: 0,
+    price: "Free",
     distance: 0,
     type: 1,
     date: "Thu, Mar 21 · 6:00 PM PDT",
@@ -114,7 +114,7 @@ const cardsOnline = [
     categoryName: "Technology",
     category: 2,
     participants: 51,
-    price: 0,
+    price: "Free",
     distance: 0,
     type: 1,
     date: "Wed, Mar 13 · 7:00 PM PDT",
@@ -126,7 +126,7 @@ const cardsOnline = [
     categoryName: "Hobbies and Passions",
     category: 5,
     participants: 16,
-    price: 0,
+    price: "Free",
     distance: 10,
     type: 1,
     date: "Wed, Mar 13 · 6:00 PM PDT",
@@ -138,7 +138,7 @@ const cardsOnline = [
     categoryName: "Technology",
     category: 2,
     participants: 33,
-    price: 0,
+    price: "Free",
     distance: 0,
     type: 1,
     date: "Thu, Mar 14 · 5:30 PM PDT",
@@ -157,9 +157,9 @@ function displayCardsM(cardsM) {
   } else {
     cardsM.forEach((el) => {
       const userCardM = document.createElement("div");
-      userCardM.className = "card-m";
+      userCardM.className = "card-m-wrapper";
       userCardM.innerHTML = `
-      <div class="card-m">
+<div class="card-m">
   <div class="hr-and-card-wrapper-m">
     <div class="hr-m"></div>
     <div class="all-card-m">
@@ -168,14 +168,42 @@ function displayCardsM(cardsM) {
       </div>
       <div class="card-content-m">
         <div class="card-date-time-m">
+          <object
+            class="not-for-mobile card-svg"
+            type="image/svg+xml"
+            data="svg/date.svg"
+          ></object>
           <p class="card-date-txt-m">${el.date}</p>
         </div>
         <div class="card-content-m">
           <h3 class="card-heading-txt-m">${el.title}</h3>
           <p class="card-topic-txt">${el.categoryName} (${el.distance} km)</p>
-          <div class="card-bottom-m">
+          <div>
+            <div class="card-date-time-m-desk">
+              <object
+                class="not-for-mobile card-svg"
+                type="image/svg+xml"
+                data="svg/date.svg"
+              ></object>
+              <p class="card-date-txt-m">${el.date}</p>
+            </div>
             <div class="card-bottom-m">
-              <p class="card-topic-txt-m">${el.participants} going</p>
+              <div class="card-going">
+                <object
+                  class="not-for-mobile card-svg"
+                  type="image/svg+xml"
+                  data="svg/check-going.svg"
+                ></object>
+                <p class="card-topic-txt-m">${el.participants} going</p>
+              </div>
+              <div class="card-price">
+                <object
+                  class="not-for-mobile card-svg"
+                  type="image/svg+xml"
+                  data="svg/ticket.svg"
+                ></object>
+                <p class="not-for-mobile">${el.price}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -211,9 +239,9 @@ function displayCardsOnline(cardsOnline) {
   } else {
     cardsOnline.forEach((el) => {
       const userCardOnline = document.createElement("div");
-      userCardOnline.className = "card-m";
+      userCardOnline.className = "card-m-wrapper";
       userCardOnline.innerHTML = `
-      <div class="card-m">
+<div class="card-m">
   <div class="hr-and-card-wrapper-m">
     <div class="hr-m"></div>
     <div class="all-card-m">
@@ -222,14 +250,42 @@ function displayCardsOnline(cardsOnline) {
       </div>
       <div class="card-content-m">
         <div class="card-date-time-m">
+          <object
+            class="not-for-mobile card-svg"
+            type="image/svg+xml"
+            data="svg/date.svg"
+          ></object>
           <p class="card-date-txt-m">${el.date}</p>
         </div>
         <div class="card-content-m">
           <h3 class="card-heading-txt-m">${el.title}</h3>
           <p class="card-topic-txt">${el.categoryName} (${el.distance} km)</p>
-          <div class="card-bottom-m">
+          <div>
+            <div class="card-date-time-m-desk">
+              <object
+                class="not-for-mobile card-svg"
+                type="image/svg+xml"
+                data="svg/date.svg"
+              ></object>
+              <p class="card-date-txt-m">${el.date}</p>
+            </div>
             <div class="card-bottom-m">
-              <p class="card-topic-txt-m">${el.participants} going</p>
+              <div class="card-going">
+                <object
+                  class="not-for-mobile card-svg"
+                  type="image/svg+xml"
+                  data="svg/check-going.svg"
+                ></object>
+                <p class="card-topic-txt-m">${el.participants} going</p>
+              </div>
+              <div class="card-price">
+                <object
+                  class="not-for-mobile card-svg"
+                  type="image/svg+xml"
+                  data="svg/ticket.svg"
+                ></object>
+                <p class="not-for-mobile">${el.price}</p>
+              </div>
             </div>
           </div>
         </div>
