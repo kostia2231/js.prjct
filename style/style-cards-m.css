@@ -4,7 +4,7 @@
   align-self: center;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 5.5rem 1rem;
+  gap: 5.5rem 2rem;
 }
 
 .all-card-m {
@@ -55,6 +55,29 @@
   height: 100%;
 }
 
+.card-topic-txt-m {
+  font-weight: 500;
+  line-height: 2rem;
+  color: #707070;
+}
+.card-topic-txt-b-m {
+  line-height: 1rem;
+}
+
+
+@media (max-width: 1024px) {
+  .cards-wrapper-m {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .cards-wrapper-m {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .friendships-block-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 480px) {
   .cards-wrapper-m {
     display: grid;
@@ -96,12 +119,12 @@
 
   .card-heading-txt-m {
     font-size: 12px;
-    line-height: 18px;
+    line-height: 16px;
   }
 
   .card-topic-txt-m {
     font-size: 9px;
-    margin-top: 1rem;
+    line-height: 12px;
     color: #707070;
   }
 
@@ -119,5 +142,9 @@
 
   .card-content-m {
     gap: 2px;
+  }
+
+  .card-bottom-m {
+    margin-top: 1rem;
   }
 }

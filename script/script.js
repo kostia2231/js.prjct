@@ -1,3 +1,8 @@
+// document.getElementById("clickable").onclick = () => {
+//   window.location = "main.html";
+//   console.log("clicked");
+// };
+
 // CARDS DATA ///////////////////////////////////////////////////////////////////////////////////
 const cards = [
   {
@@ -171,10 +176,10 @@ function displayCards(cards) {
       </div>
       <div class="card-content-sort">
         <h3 class="card-heading-txt-sort">${el.title}</h3>
-        <p class="card-topic-txt">
+        <p class="card-topic-txt-sort">
           ${el.categoryName} (${el.distance} km)
         </p>
-        <div class="card-bottom-sort">
+        <div>
           <div class="card-bottom-sort">
             <p class="card-topic-txt-sort">${el.participants} going</p>
           </div>

@@ -128,12 +128,17 @@
   width: 100%;
   gap: 1rem;
   margin-bottom: 8.75rem;
+  align-self: center;
 }
 
 .card-sort {
   max-width: 100%;
   display: flex;
   gap: 1rem;
+}
+
+.card-bottom-sort {
+  margin-top: 2rem;
 }
 
 .card-img-sort {
@@ -151,7 +156,6 @@
 }
 
 .card-topic-txt-sort {
-  margin-top: 2rem;
   font-size: 0.85rem;
   color: #707070;
 }
@@ -180,6 +184,12 @@
   margin-top: 8.75rem;
 }
 
+.left-side {
+  display: grid;
+  align-items: center;
+  width: 100%;
+}
+
 .right-side {
   margin-left: auto;
   text-align: end;
@@ -192,8 +202,22 @@
 
 @media (max-width: 480px) {
   .both-sides-wrapper {
-    grid-template-columns: 1fr;
+    width: 100%;
     margin-top: auto;
+    padding-inline: 1rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .top-wrapper {
+    width: 100%;
+  }
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .top {
     gap: 2rem;
@@ -204,21 +228,38 @@
   .menu {
     font-size: 14px;
   }
+  .all-card-sort {
+    gap: 0.5rem;
+  }
   .cards-wrapper-sort {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 1rem;
     margin-bottom: 5rem;
+  }
+  .card-content-sort {
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
   }
   .dropdowns-wrapper {
     width: 100%;
   }
   .card-date-txt-sort {
     font-size: 9px;
+    line-height: 12px;
   }
   .card-topic-txt-sort {
     font-size: 9px;
-    margin-top: 1rem;
+    line-height: 12px;
+    margin-top: 0;
   }
   .card-heading-txt-sort {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .card-bottom-sort {
+    margin-top: 1rem;
   }
 }

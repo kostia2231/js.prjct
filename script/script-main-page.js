@@ -177,7 +177,7 @@ function displayCardsM(cardsM) {
         </div>
         <div class="card-content-m">
           <h3 class="card-heading-txt-m">${el.title}</h3>
-          <p class="card-topic-txt">${el.categoryName} (${el.distance} km)</p>
+          <p class="card-topic-txt-m">${el.categoryName} (${el.distance} km)</p>
           <div>
             <div class="card-date-time-m-desk">
               <object
@@ -194,7 +194,7 @@ function displayCardsM(cardsM) {
                   type="image/svg+xml"
                   data="svg/check-going.svg"
                 ></object>
-                <p class="card-topic-txt-m">${el.participants} going</p>
+                <p class="card-topic-txt-b-m">${el.participants} going</p>
               </div>
               <div class="card-price">
                 <object
@@ -202,7 +202,7 @@ function displayCardsM(cardsM) {
                   type="image/svg+xml"
                   data="svg/ticket.svg"
                 ></object>
-                <p class="not-for-mobile">${el.price}</p>
+                <p class="card-topic-txt-b-m not-for-mobile">${el.price}</p>
               </div>
             </div>
           </div>
@@ -259,7 +259,7 @@ function displayCardsOnline(cardsOnline) {
         </div>
         <div class="card-content-m">
           <h3 class="card-heading-txt-m">${el.title}</h3>
-          <p class="card-topic-txt">${el.categoryName} (${el.distance} km)</p>
+          <p class="card-topic-txt-m">${el.categoryName} (${el.distance} km)</p>
           <div>
             <div class="card-date-time-m-desk">
               <object
@@ -276,7 +276,7 @@ function displayCardsOnline(cardsOnline) {
                   type="image/svg+xml"
                   data="svg/check-going.svg"
                 ></object>
-                <p class="card-topic-txt-m">${el.participants} going</p>
+                <p class="card-topic-txt-b-m">${el.participants} going</p>
               </div>
               <div class="card-price">
                 <object
@@ -284,7 +284,7 @@ function displayCardsOnline(cardsOnline) {
                   type="image/svg+xml"
                   data="svg/ticket.svg"
                 ></object>
-                <p class="not-for-mobile">${el.price}</p>
+                <p class="card-topic-txt-b-m not-for-mobile">${el.price}</p>
               </div>
             </div>
           </div>
