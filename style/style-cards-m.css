@@ -36,6 +36,7 @@
 
 .card-date-time-m {
   display: none;
+  font-weight: 500;
 }
 
 .card-bottom-m {
@@ -149,5 +150,11 @@
 
   .card-bottom-m {
     margin-top: 1rem;
+  }
+
+  .card-topic-txt-b-m {
+    line-height: 1rem;
+    font-size: 9px;
+    color: #707070;
   }
 }

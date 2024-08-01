@@ -220,7 +220,6 @@ dropdowns.forEach((dropdown) => {
     caret.classList.toggle("caret-rotate");
     menu.classList.toggle("menu-open");
   });
-
   // Обработчик клика на опции
   options.forEach((option) => {
     option.addEventListener("click", () => {
@@ -233,8 +232,10 @@ dropdowns.forEach((dropdown) => {
         opt.classList.remove("active");
       });
       option.classList.add("active");
-
-      filterCards();
+      // Анимация транзишн при запуске функции фильтрации
+      document.startViewTransition(() => {
+        filterCards();
+      });
     });
   });
 });
@@ -244,7 +245,6 @@ document.addEventListener("click", (event) => {
     const select = dropdown.querySelector(".select");
     const menu = dropdown.querySelector(".menu");
     const caret = dropdown.querySelector(".caret");
-
     // Если клик был вне dropdown, то закрываем меню
     if (
       !dropdown.contains(event.target) &&

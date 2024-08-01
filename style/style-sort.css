@@ -149,6 +149,7 @@
   font-size: 14px;
   color: #7c6f50;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .card-heading-txt-sort {
@@ -192,7 +193,6 @@
 
 .right-side {
   margin-left: auto;
-  text-align: end;
 }
 
 .right-side p {
@@ -200,83 +200,31 @@
   font-weight: 600;
 }
 
-@media (max-width: 480px) {
-  .both-sides-wrapper {
-    width: 100%;
-    margin-top: 8rem;
-    padding-inline: 1rem;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .top-wrapper {
-    width: 100%;
-  }
-  .left-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .top {
-    gap: 1rem;
-  }
-  .selected {
-    font-size: 14px;
-  }
-  .menu {
-    font-size: 14px;
-  }
-  .all-card-sort {
-    gap: 0.5rem;
-  }
-  .cards-wrapper-sort {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    gap: 1rem;
-    margin-bottom: 5rem;
-  }
-  .card-content-sort {
-    gap: 2px;
-    display: flex;
-    flex-direction: column;
-  }
-  .dropdowns-wrapper {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  .card-date-txt-sort {
-    font-size: 9px;
-    line-height: 12px;
-  }
-  .card-topic-txt-sort {
-    font-size: 9px;
-    line-height: 12px;
-    margin-top: 0;
-  }
-  .card-heading-txt-sort {
-    font-size: 12px;
-    line-height: 16px;
-  }
-  .card-bottom-sort {
-    margin-top: 1rem;
-  }
+.map-thumbnail {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: end;
 }
 
-@media (max-width: 700px) {
-  .both-sides-wrapper {
-    grid-template-columns: 0;
-    grid-template-rows: 1fr;
-  }
-  .right-side {
-    display: none;
-  }
+.map-thumbnail-img {
+  max-width: 100%;
 }
 
-@media (max-width: 1024) {
-  .both-sides-wrapper {
-    grid-template-columns: 1.5fr 1fr;
+.map-thumbnail-txt {
+  display: grid;
+  gap: 0.5rem;
+}
+.map-thumbnail-txt * {
+  line-height: 14px;
+}
+
+/* /////////Media Queries///////// */
+@media (max-width: 1050px) {
+  .map-thumbnail-img {
+    max-width: 80%;
+  }
+  .map-thumbnail-txt {
+    max-width: 80%;
+    margin-left: auto;
   }
 }
