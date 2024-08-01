@@ -180,7 +180,7 @@
 .both-sides-wrapper {
   width: min(90%, var(--main-width));
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   margin-top: 8.75rem;
 }
 
@@ -203,7 +203,7 @@
 @media (max-width: 480px) {
   .both-sides-wrapper {
     width: 100%;
-    margin-top: auto;
+    margin-top: 8rem;
     padding-inline: 1rem;
     align-self: center;
     display: flex;
@@ -220,7 +220,7 @@
     justify-content: center;
   }
   .top {
-    gap: 2rem;
+    gap: 1rem;
   }
   .selected {
     font-size: 14px;
@@ -245,6 +245,7 @@
   }
   .dropdowns-wrapper {
     width: 100%;
+    margin-bottom: 2rem;
   }
   .card-date-txt-sort {
     font-size: 9px;
@@ -261,5 +262,15 @@
   }
   .card-bottom-sort {
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .both-sides-wrapper {
+    grid-template-columns: 0;
+    grid-template-rows: 1fr;
+  }
+  .right-side {
+    display: none;
   }
 }

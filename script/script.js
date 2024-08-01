@@ -1,7 +1,3 @@
-// document.getElementById("clickable").onclick = () => {
-//   window.location = "main.html";
-//   console.log("clicked");
-// };
 
 // CARDS DATA ///////////////////////////////////////////////////////////////////////////////////
 const cards = [

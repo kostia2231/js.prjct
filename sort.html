@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events</title>
+    <link rel="stylesheet" href="style/style-navbar.css" />
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/style-sort.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,65 +15,61 @@
     />
   </head>
   <body>
-    <header>
-        <div class="logo-wrapper">
-          <object type="image/svg+xml" data="svg/logo.svg"></object>
+    <div class="navbar-wrapper">
+      <div class="navbar-left">
+        <div id="clickable" class="navbar-logo">
+          <img src="svg/logo.svg" alt="Example SVG" width="100" height="40" />
+        </div>
+        <div class="navbar-search">
+          <div class="left-wrapper">
+            <div class="search-left">
+              <form>
+                <div class="search">
+                  <object
+                    type="image/svg+xml"
+                    data="svg/search_icon.svg"
+                  ></object>
+                  <input
+                    class="search-input"
+                    type="text"
+                    name="query"
+                    placeholder="Search events"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="search-right"><p>Mountain View, CA</p></div>
+          </div>
+          <button class="search-button search-button-background"></button>
         </div>
       </div>
-      <div class="serach-bar-wrapper">
-        <div class="search-wrapper">
-          <div class="search-bar">
-            <form>
-              <div class="search">
-                <object
-                  type="image/svg+xml"
-                  data="svg/search_icon.svg"
-                ></object>
-                <input
-                  class="search-input"
-                  type="text"
-                  name="query"
-                  placeholder="Search events"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="city-dropdown">
-            <p>Mountain View, CA</p>
-          </div>
-        </div>
-        <div class="search-button">
-          <object
-            type="image/svg+xml"
-            data="svg/search_icon_button.svg"
-          ></object>
-        </div>
-      </div>
-      <div class="right-side-header">
-        <div class="langauge-change">
+      <div class="navbar-right">
+        <button class="navbar-language-toggle">
           <object type="image/svg+xml" data="svg/language_icon.svg"></object>
           <p class="language-element">English</p>
-        </div>
-        <button class="log-in-button">Log in</button>
-        <button class="sign-in-button">Sign up</button>
+        </button>
+        <button class="navbar-log-in-button">Log in</button>
+        <button class="navbar-sign-in-button">Sign up</button>
       </div>
-    </header>
-    <header-mobile>
-      <div class="header-top">
-        <div class="logo-wrapper">
-          <object type="image/svg+xml" data="svg/logo.svg"></object>
+    </div>
+    <div class="navbar-mobile-wrapper">
+      <div class="navbar-mobile-str">
+        <div class="navbar-left">
+          <div id="clickable" class="navbar-logo">
+            <img src="svg/logo.svg" alt="Example SVG" height="40" />
+          </div>
         </div>
-        <div class="right-side-header">
-          <div class="langauge-change">
+        <div class="navbar-right">
+          <button class="navbar-language-toggle">
             <object type="image/svg+xml" data="svg/language_icon.svg"></object>
             <p class="language-element">English</p>
-          </div>
-          <button class="log-in-button">Log in</button>
-          <button class="sign-in-button">Sign up</button>
+          </button>
+          <button class="navbar-log-in-button">Log in</button>
+          <button class="navbar-sign-in-button">Sign up</button>
         </div>
       </div>
-      <div class="serach-bar-wrapper">
-        <div class="search-bar">
+      <div class="navbar-search">
+        <div class="left-wrapper">
           <form>
             <div class="search">
               <object type="image/svg+xml" data="svg/search_icon.svg"></object>
@@ -85,14 +82,11 @@
             </div>
           </form>
         </div>
-        <div class="search-button">
-          <object
-            type="image/svg+xml"
-            data="svg/search_icon_button.svg"
-          ></object>
+        <div class="button-search-wrapper">
+          <button class="search-button search-button-background"></button>
         </div>
       </div>
-    </header-mobile>
+    </div>
     <div class="both-sides-wrapper">
       <div class="left-side">
         <div class="top-wrapper">
@@ -270,6 +264,7 @@
         </div>
       </div>
     </footer>
+    <script src="script/click.js"></script>
     <script src="script/script.js"></script>
   </body>
 </html>

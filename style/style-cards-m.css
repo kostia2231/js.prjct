@@ -7,6 +7,10 @@
   gap: 5.5rem 2rem;
 }
 
+.card-m-wrapper:hover {
+  cursor: pointer;
+}
+
 .all-card-m {
   display: flex;
   flex-direction: column;
@@ -63,7 +67,6 @@
 .card-topic-txt-b-m {
   line-height: 1rem;
 }
-
 
 @media (max-width: 1024px) {
   .cards-wrapper-m {
