@@ -6,6 +6,6 @@ document.getElementById("clickable").onclick = () => {
 let cklickable = document.getElementsByClassName("click-to-sort");
 for (let i = 0; i < cklickable.length; i++) {
   cklickable[i].addEventListener("click", () => {
-    window.location.href = "sort.html";
+    window.location = "sort.html";
   });
 }

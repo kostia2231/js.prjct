@@ -180,7 +180,7 @@
 .both-sides-wrapper {
   width: min(90%, var(--main-width));
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin-top: 8.75rem;
 }
 
@@ -272,5 +272,11 @@
   }
   .right-side {
     display: none;
+  }
+}
+
+@media (max-width: 1024) {
+  .both-sides-wrapper {
+    grid-template-columns: 1.5fr 1fr;
   }
 }
