@@ -525,6 +525,7 @@ hr {
 }
 
 /* /////////Media Queries///////// */
+
 @media (max-width: 1300px) {
   .categories-cards {
     grid-template-columns: repeat(4, 1fr);

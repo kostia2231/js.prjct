@@ -311,7 +311,3 @@ window.addEventListener("load", () => {
     console.log("No cards found in local storage.");
   }
 });
-
-window.addEventListener("load", function () {
-  document.body.classList.remove("hidden");
-});
