@@ -159,30 +159,30 @@ function displayCards(cards) {
       const userCard = document.createElement("div");
       userCard.className = "card-sort";
       userCard.innerHTML = `
-<div class="hr-and-card-wrapper-sort">
-  <div class="hr-sort"></div>
-  <div class="all-card-sort">
-    <div>
-      <img src="${el.image}" alt="" class="card-img-sort" />
-    </div>
-    <div class="card-content-sort">
-      <div class="card-date-time-sort">
-        <p class="card-date-txt-sort">${el.date}</p>
-      </div>
-      <div class="card-content-sort">
-        <h3 class="card-heading-txt-sort">${el.title}</h3>
-        <p class="card-topic-txt-sort">
-          ${el.categoryName} (${el.distance} km)
-        </p>
-        <div>
-          <div class="card-bottom-sort">
-            <p class="card-topic-txt-sort">${el.participants} going</p>
+      <div class="hr-and-card-wrapper-sort">
+        <div class="hr-sort"></div>
+        <div class="all-card-sort">
+          <div>
+            <img src="${el.image}" alt="" class="card-img-sort" />
+          </div>
+          <div class="card-content-sort">
+            <div class="card-date-time-sort">
+              <p class="card-date-txt-sort">${el.date}</p>
+            </div>
+            <div class="card-content-sort">
+              <h3 class="card-heading-txt-sort">${el.title}</h3>
+              <p class="card-topic-txt-sort">
+                ${el.categoryName} (${el.distance} km)
+              </p>
+              <div>
+                <div class="card-bottom-sort">
+                  <p class="card-topic-txt-sort">${el.participants} going</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
       `;
       cardContainer.appendChild(userCard);
     });
